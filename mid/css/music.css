@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(../img/BigSurGraphic.jpg); /* 设置背景图片 */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    text-align: center;
+}
+
+.music-player {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    backdrop-filter: blur(10px); /* 毛玻璃效果 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.album-art {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.album-art img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation: rotate 5s linear infinite; /* 图片旋转动画 */
+}
+
+.controls {
+    margin: 10px;
+}
+
+button {
+    border: none;
+    background-color: #0074cc;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 24px;
+    margin: 5px;
+}
+
+button:focus {
+    outline: none;
+}
+/* 自定义音乐播放控制条 */
+
+audio {
+    width: 100%;
+    max-width: 300px; /* 设置最大宽度，根据需要调整 */
+    margin-top: 10px;
+}
+
+/* 更改控制条按钮颜色 */
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-pause-button {
+    color: orange;
+}
+
+/* 自定义音乐播放控制条进度条样式，半透明的橙色 */
+audio::-webkit-media-controls-progress-bar {
+    background-color: orange; /* 半透明的橙色，可以根据需要调整颜色和透明度 */
+    border-radius: 10px; /* 圆角 */
+}
+
+/* 自定义音乐播放控制条音量控制颜色 */
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-volume-slider {
+    color: orange
+}
+
+/* 自定义音乐播放控制条的时间和音量样式 */
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-time-remaining-display {
+    color: orange;
+    font-size: 12px;
+}
+
+audio::-webkit-media-controls-volume-slider {
+    width: 50px;
+}
+
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

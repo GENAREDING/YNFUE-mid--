@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+	background-image: url(../img/bk2.jpg);
+	animation: bak 7s infinite;
+	
+}
+@keyframes bak {
+    from{
+        background-image: url(../img/bk.jpg);
+    }
+    to{
+        background-image: url(../img/bk2.jpg);
+    }
+
+}
+
+
+.container {
+    text-align: center;
+}
+
+.function-area {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* 间隔大小 */
+    border-radius: 10px; /* 弧度 */
+    padding: 20px;
+	background-color: rgba(255, 255, 255, 0.3); /* 背景透明度设置 */
+	backdrop-filter: blur(10px); /* 毛玻璃效果 */
+}
+
+.function-box {
+    text-align: center;
+}
+
+.function-box img {
+    width: 100px; /* 图片宽度 */
+    height: 100px; /* 图片高度 */
+}
+
+.function-box p {
+    margin: 10px 0;
+}

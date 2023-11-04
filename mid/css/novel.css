@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(../img/helloYellow.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    text-align: center;
+}
+.novel-button:hover {
+    transform: scale(1.1);
+}
+.novel-button {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    backdrop-filter: blur(10px); /XXXSCAESKXXX* 毛玻璃效果XXXSCAESKXXX */
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.novel-content {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    backdrop-filter: blur(10px); /* 毛玻璃效果 */
+}
