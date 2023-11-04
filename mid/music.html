@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐播放器</title>
+    <link rel="stylesheet" href="css/music.css">
+</head>
+<body>
+    <div class="container">
+        <div class="music-player">
+            <div class="album-art">
+                <img src="img/music-1.jpg" alt="音乐封面">
+            </div>
+            <div class="controls">
+                <button id="prev-button">上一曲</button>
+                <button id="play-button">播放</button>
+                <button id="next-button">下一曲</button>
+            </div>
+            <audio id="audio" controls>
+                <source src="res/music-1.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

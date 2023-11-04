@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id="app">
+    <div class="container">
+        <div class="header">
+            <h1>登 录</h1>
+        </div>
+        <div class="main">
+            <form >
+                <span>
+                    <i class="fas fa-user"></i>
+                    <input style="border-radius: 24px" type="text" v-model="username" placeholder="账号" >
+                </span><br>
+                <span>
+                    <i class="fas fa-lock"></i>
+                    <input style="border-radius: 24px" type="password"  v-model="password"placeholder="密码">
+                </span><br>
+                <button style="border-radius: 24px" @click="login">登 录</button><br>
+                <span class="author" >CopyRight® 金阿鼎</span>
+            </form>
+        </div>
+    </div>
+	</div>
+	 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+	    <script >
+			new Vue({
+			  el: '#app',
+			  data: {
+			    username: '',
+			    password: ''
+			  },
+			  methods: {
+			    login() {
+			      if (this.username === 'jad' && this.password === 'jad') {
+			        window.location.href = 'main.html'; // 导航到main.html
+					alert("登录成功")
+			      } else {
+			        alert('登录失败，请检查用户名和密码。');
+			      }
+			    }
+			  }
+			});
+			
+		</script>
+</body>
+</html>

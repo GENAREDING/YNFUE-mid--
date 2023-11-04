@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <link rel="stylesheet" href="css/video.css">
+</head>
+<body>
+    <div class="container">
+        <div class="video-player">
+            <div class="thumbnail" @click="playVideo">
+                <img src="img/kun1.jpg" alt="大图" class="hover-zoom">
+            </div>
+            <div class="small-thumbnails">
+                <img src="img/kun2.jpg" alt="小图1" class="hove-zoom" @click="changeVideo('res/ikun.mp4')">
+                <img src="img/kun2.jpg" alt="小图2" class="hove-zoom" @click="changeVideo('res/ikun.mp4')">
+                <img src="img/kun2.jpg" alt="小图3" class="hove-zoom" @click="changeVideo('res/ikun.mp4')">
+            </div>
+            <video id="video" controls style="display: none;">
+                <source src="res/ikun.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+       <script>
+           new Vue({
+               el: '.container',
+               methods: {
+                   playVideo() {
+                       const video = document.getElementById('video');
+                     if (video.style.display === 'block') {
+                    video.style.display = 'none';
+                    video.pause();
+                    } else {
+                    video.style.display = 'block';
+                    video.play();
+                }
+                   },
+                   changeVideo(videoSrc) {
+                       const video = document.getElementById('video');
+                       video.src = videoSrc;
+                       video.style.display = 'block';
+                       video.play();
+                   }
+               }
+           });
+       </script>
+</body>
+</html>
